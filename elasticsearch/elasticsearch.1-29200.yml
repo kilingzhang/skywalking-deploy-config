@@ -1,0 +1,11 @@
+cluster.name: "docker-vip-cluster"
+network.host: 10.0.0.1
+http.port: 29200
+http.enabled: false
+transport.tcp.port: 29300
+node.name: master-1-29200
+node.master: false
+node.data: true
+discovery.zen.ping.unicast.hosts: ["10.0.0.1:9300","10.0.0.1:19300","10.0.0.1:29300","10.0.0.2:9300","10.0.0.2:19300","10.0.0.2:29300"]
+discovery.zen.fd.ping_timeout: 1000s
+discovery.zen.fd.ping_retries: 10
